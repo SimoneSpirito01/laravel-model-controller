@@ -1,0 +1,109 @@
+@import url(https://fonts.googleapis.com/css2?family=Lato:wght@300;
+
+400;700&display=swap);* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #141414;
+  padding: 60px 0;
+}
+
+main .container {
+  width: 80%;
+  max-width: 1080px;
+}
+
+main .container .movies {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+main .container .movies .card {
+  width: calc(50% - 40px);
+  margin: 20px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: 20px;
+  transition: box-shadow 0.3s;
+  cursor: pointer;
+  position: relative;
+}
+
+main .container .movies .card:hover {
+  box-shadow: gold 0px -1px 8px;
+}
+
+main .container .movies .card:hover img {
+  filter: brightness(20%);
+}
+
+main .container .movies .card:hover .info,
+main .container .movies .card:hover .pop-corn {
+  opacity: 1;
+  transform: translateY(0px);
+}
+
+main .container .movies .card img {
+  display: block;
+  width: 100%;
+  border-radius: 20px;
+  transition: filter 0.4s;
+}
+
+main .container .movies .card .info {
+  height: 40%;
+  color: white;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border-radius: 20px;
+  padding: 20px;
+  list-style: none;
+  font-size: 15px;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+main .container .movies .card .info li {
+  margin: 8px 0;
+}
+
+main .container .movies .card .info li.title {
+  font-size: 24px;
+}
+
+main .container .movies .card .info li.trama {
+  line-height: 21px;
+}
+
+main .container .movies .card .info span {
+  font-variant: small-caps;
+  font-size: 22px;
+  text-transform: lowercase;
+}
+
+main .container .movies .card .pop-corn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: white;
+  padding: 20px;
+  opacity: 0;
+  transform: translateY(-23px);
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+main .container .movies .card .pop-corn span {
+  margin-right: 10px;
+}
+

@@ -1,1 +1,101 @@
-//
+@import 'partials/reset';
+@import 'partials/typography';
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #141414;
+    padding: 60px 0;
+
+    .container {
+        width: 80%;
+        max-width: 1080px;
+
+        .movies {
+            display: flex;
+            flex-wrap: wrap;
+
+            .card {
+                width: calc(100% / 2 - 40px);
+                margin: 20px;
+                box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+                border-radius: 20px;
+                transition: box-shadow 0.3s;
+                cursor: pointer;
+                position: relative;
+
+                &:hover {
+                    box-shadow: gold 0px -1px 8px;
+
+                    img {
+                        filter: brightness(20%);
+                    }
+
+                    .info, .pop-corn {
+                        opacity: 1;
+                        transform: translateY(0px);
+                    }
+                }
+                
+                img {
+                    display: block;
+                    width: 100%;
+                    border-radius: 20px;
+                    transition: filter 0.4s;
+                }
+
+                .info {
+                    height: 40%;
+                    color: white;
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    border-radius: 20px;
+                    padding: 20px;
+                    list-style: none;
+                    font-size: 15px;
+                    opacity: 0;
+                    transform: translateY(50px);
+                    transition: transform 0.3s, opacity 0.3s;
+
+                    
+
+                    li {
+                        margin: 8px 0;
+
+                        &.title {
+                            font-size: 24px;
+                        }
+
+                        &.trama {
+                            line-height: 21px;
+                        }
+                    }
+
+                    span {
+                        font-variant: small-caps;
+                        font-size: 22px;
+                        text-transform: lowercase;
+                    }
+
+                }
+
+                .pop-corn {
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    color: white;
+                    padding: 20px;
+                    opacity: 0;
+                    transform: translateY(-23px);
+                    transition: transform 0.3s, opacity 0.3s;
+
+                    span {
+                        margin-right: 10px;
+                    }
+                }
+            }
+        }
+    }
+}
